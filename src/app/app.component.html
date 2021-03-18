@@ -1,16 +1,27 @@
-<!--	Large, one-off header, usually at the top of the page (e.g. a hero header). -->
-<div class="mat-display-4">This is display 4</div>
-<div class="mat-display-3">This is display 3</div>
-<div class="mat-display-2">This is display 2</div>
-<div class="mat-display-1">This is display 1</div>
+<div class="rectangular-buttons container">
+  <button mat-button>Basic</button>
+  <button mat-raised-button>Raised</button>
+  <button mat-stroked-button>Stroked</button>
+  <button mat-flat-button>Flat</button>
+</div>
 
-<!-- Section heading corresponding from the <h1> to <h4> tags .-->
-<div class="mat-h1 mat-headline">Section heading corresponding to the h1 tag.</div>
-<div class="mat-h2 mat-title">Section heading corresponding to the h2 tag.</div>
-<div class="mat-h3 mat-subheading-2">Section heading corresponding to the h3 tag.</div>
-<div class="mat-h4 mat-subheading-1">Section heading corresponding to the h4 tag.</div>
+<div class="circular-buttons container">
+  <button mat-icon-button aria-label="Icon Button">
+    <mat-icon>home</mat-icon>
+  </button>
 
-<!-- Classes for body content -->
-<div class="mat-body mat-body-1">Base body text</div>
-<div class="mat-body-strong mat-body-2">Bolder body text</div>
-<div class="mat-caption mat-small">Smaller body and hint text</div>
+  <button mat-fab aria-label="FAB Button" disableRipple>
+    <mat-icon>delete</mat-icon>
+  </button>
+
+  <button mat-mini-fab aria-label="MinI FAB Button">
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>
+
+<div class="colored-buttons container">
+  <button mat-raised-button color="primary">Primary</button>
+  <button mat-raised-button color="accent">Accent</button>
+  <button mat-raised-button colro="warn">Warn</button>
+</div>
+
