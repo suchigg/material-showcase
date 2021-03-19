@@ -43,3 +43,23 @@
   <button mat-raised-button colro="warn">Warn</button>
 </div>
 
+<div>
+  <mat-button-toggle>Toggle Me</mat-button-toggle>
+</div>
+
+
+<!-- radio toggle group-->
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style" #fontSyleGroup="matButtonToggleGroup">
+  <mat-button-toggle value="bold">Bold</mat-button-toggle>
+  <mat-button-toggle value="italic">Italic</mat-button-toggle>
+  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>
+<p>selected: {{fontSyleGroup.value}}</p>
+
+<!-- checkbox toggle group -->
+<mat-button-toggle-group name="tech" aria-label="Font Style" #techGroup="matButtonToggleGroup" multiple>
+  <mat-button-toggle value="angular">Angular</mat-button-toggle>
+  <mat-button-toggle value="react">React</mat-button-toggle>
+  <mat-button-toggle value="vue">Vue</mat-button-toggle>
+</mat-button-toggle-group>
+<p>selected: {{techGroup.value}}</p>
