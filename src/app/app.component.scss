@@ -1,7 +1,7 @@
-button {
-  margin: 0 2em;
-}
+.navbar {
+  justify-content: space-between;
 
-.container {
-  padding: 3em;
+  span {
+    padding-right: 1rem;
+  }
 }
