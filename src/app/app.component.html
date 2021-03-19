@@ -1,65 +1,7 @@
-<!--	Large, one-off header, usually at the top of the page (e.g. a hero header). -->
-<div class="mat-display-4">This is display 4</div>
-<div class="mat-display-3">This is display 3</div>
-<div class="mat-display-2">This is display 2</div>
-<div class="mat-display-1">This is display 1</div>
-
-<!-- Section heading corresponding from the <h1> to <h4> tags .-->
-<div class="mat-h1 mat-headline">Section heading corresponding to the h1 tag.</div>
-<div class="mat-h2 mat-title">Section heading corresponding to the h2 tag.</div>
-<div class="mat-h3 mat-subheading-2">Section heading corresponding to the h3 tag.</div>
-<div class="mat-h4 mat-subheading-1">Section heading corresponding to the h4 tag.</div>
-
-<!-- Classes for body content -->
-<div class="mat-body mat-body-1">Base body text</div>
-<div class="mat-body-strong mat-body-2">Bolder body text</div>
-<div class="mat-caption mat-small">Smaller body and hint text</div>
-
-
-<div class="rectangular-buttons">
-  <button mat-button>Basic</button>
-  <button mat-raised-button>Raised</button>
-  <button mat-stroked-button>Stroked</button>
-  <button mat-flat-button>Flat</button>
+<!-- icons -->
+<div class="container">
+  <mat-icon>card_giftcard</mat-icon>
+  <mat-icon color="primary">filter_alt</mat-icon>
+  <mat-icon color="accent">eco</mat-icon>
+  <mat-icon color="warn">language</mat-icon>
 </div>
-
-<div class="circular-buttons">
-  <button mat-icon-button aria-label="Icon Button">
-    <mat-icon>home</mat-icon>
-  </button>
-
-  <button mat-fab aria-label="FAB Button" disableRipple>
-    <mat-icon>delete</mat-icon>
-  </button>
-
-  <button mat-mini-fab aria-label="MinI FAB Button">
-    <mat-icon>menu</mat-icon>
-  </button>
-</div>
-
-<div class="colored-buttons">
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button colro="warn">Warn</button>
-</div>
-
-<div>
-  <mat-button-toggle>Toggle Me</mat-button-toggle>
-</div>
-
-
-<!-- radio toggle group-->
-<mat-button-toggle-group name="fontStyle" aria-label="Font Style" #fontSyleGroup="matButtonToggleGroup">
-  <mat-button-toggle value="bold">Bold</mat-button-toggle>
-  <mat-button-toggle value="italic">Italic</mat-button-toggle>
-  <mat-button-toggle value="underline">Underline</mat-button-toggle>
-</mat-button-toggle-group>
-<p>selected: {{fontSyleGroup.value}}</p>
-
-<!-- checkbox toggle group -->
-<mat-button-toggle-group name="tech" aria-label="Font Style" #techGroup="matButtonToggleGroup" multiple>
-  <mat-button-toggle value="angular">Angular</mat-button-toggle>
-  <mat-button-toggle value="react">React</mat-button-toggle>
-  <mat-button-toggle value="vue">Vue</mat-button-toggle>
-</mat-button-toggle-group>
-<p>selected: {{techGroup.value}}</p>
