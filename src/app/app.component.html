@@ -1,119 +1,27 @@
+<!-- spinners e progress bar-->
 <div class="container">
-<!--	Large, one-off header, usually at the top of the page (e.g. a hero header). -->
-<div class="mat-display-4">This is display 4</div>
-<div class="mat-display-3">This is display 3</div>
-<div class="mat-display-2">This is display 2</div>
-<div class="mat-display-1">This is display 1</div>
-
-<!-- Section heading corresponding from the <h1> to <h4> tags .-->
-<div class="mat-h1 mat-headline">Section heading corresponding to the h1 tag.</div>
-<div class="mat-h2 mat-title">Section heading corresponding to the h2 tag.</div>
-<div class="mat-h3 mat-subheading-2">Section heading corresponding to the h3 tag.</div>
-<div class="mat-h4 mat-subheading-1">Section heading corresponding to the h4 tag.</div>
-
-<!-- Classes for body content -->
-<div class="mat-body mat-body-1">Base body text</div>
-<div class="mat-body-strong mat-body-2">Bolder body text</div>
-<div class="mat-caption mat-small">Smaller body and hint text</div>
+  <mat-progress-spinner value="21"></mat-progress-spinner>
 </div>
-
-
-
-<div class="rectangular-buttons container">
-  <button mat-button>Basic</button>
-  <button mat-raised-button>Raised</button>
-  <button mat-stroked-button>Stroked</button>
-  <button mat-flat-button>Flat</button>
+<div class="container">
+  <mat-progress-spinner value="55" color="accent"></mat-progress-spinner>
 </div>
-
-<div class="circular-buttons container">
-  <button mat-icon-button aria-label="Icon Button">
-    <mat-icon>home</mat-icon>
-  </button>
-
-  <button mat-fab aria-label="FAB Button" disableRipple>
-    <mat-icon>delete</mat-icon>
-  </button>
-
-  <button mat-mini-fab aria-label="MinI FAB Button">
-    <mat-icon>menu</mat-icon>
-  </button>
-</div>
-
-<div class="colored-buttons container">
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button colro="warn">Warn</button>
+<div class="container">
+  <mat-progress-spinner value="100" color="warn"></mat-progress-spinner>
 </div>
 
 <div class="container">
-  <mat-button-toggle>Toggle Me</mat-button-toggle>
+  <mat-spinner></mat-spinner>
 </div>
 
-
-<!-- radio toggle group-->
 <div class="container">
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #fontSyleGroup="matButtonToggleGroup">
-    <mat-button-toggle value="bold">Bold</mat-button-toggle>
-    <mat-button-toggle value="italic">Italic</mat-button-toggle>
-    <mat-button-toggle value="underline">Underline</mat-button-toggle>
-  </mat-button-toggle-group>
-  <p>selected: {{fontSyleGroup.value}}</p>
-</div>
-
-
-<!-- checkbox toggle group -->
-<div class="container">
-  <mat-button-toggle-group name="tech" aria-label="Font Style" #techGroup="matButtonToggleGroup" multiple>
-    <mat-button-toggle value="angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="react">React</mat-button-toggle>
-    <mat-button-toggle value="vue">Vue</mat-button-toggle>
-  </mat-button-toggle-group>
-  <p>selected: {{techGroup.value}}</p>
-</div>
-
-
-
-<!-- icons -->
-<div class="container">
-  <mat-icon>card_giftcard</mat-icon>
-  <mat-icon color="primary">filter_alt</mat-icon>
-  <mat-icon color="accent">eco</mat-icon>
-  <mat-icon color="warn">language</mat-icon>
-</div>
-
-<!-- badges positions-->
-<div class="container">
-  <span matBadge="5">Notifications</span>
+  <mat-progress-bar mode="determinate" value="66"></mat-progress-bar>
 </div>
 <div class="container">
-  <span matBadge="8" matBadgePosition="below before">Notifications</span>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
 <div class="container">
-  <span matBadge="13" matBadgePosition="below after">Notifications</span>
+  <mat-progress-bar mode="buffer" color="accent" value="35" bufferValue="55"></mat-progress-bar>
 </div>
 <div class="container">
-  <span matBadge="21" matBadgePosition="above before">Notifications</span>
-</div>
-
-<!-- badges sizes -->
-<div class="container">
-  <span matBadge="1" matBadgeSize="small">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="2" matBadgeSize="medium">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="3" matBadgeSize="large">Notifications</span>
-</div>
-
-<!-- badges colors -->
-<div class="container">
-  <span matBadge="1" matBadgeColor="primary">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="2" matBadgeColor="accent">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="3" matBadgeColor="warn">Notifications</span>
+  <mat-progress-bar mode="query"></mat-progress-bar>
 </div>
