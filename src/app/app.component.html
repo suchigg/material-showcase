@@ -176,7 +176,7 @@
   <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
 
   <mat-menu #appMenu="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="frontEndSubMenu" >FrontEnd</button>
+    <button mat-menu-item [matMenuTriggerFor]="frontEndSubMenu">FrontEnd</button>
     <button mat-menu-item [matMenuTriggerFor]="backEndSubMenu">Backend</button>
   </mat-menu>
 
@@ -279,4 +279,85 @@
     <mat-grid-tile>Tile 7</mat-grid-tile>
     <mat-grid-tile colspan=2>Tile 8</mat-grid-tile>
   </mat-grid-list>
+</div>
+
+<!-- expansion panel -->
+<div class="container">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular Fundamentals
+      </mat-panel-title>
+      <mat-panel-description>
+        Total durations: 3 hours
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p>
+      This is the panel content. Add courses details
+    </p>
+    <mat-action-row>
+      <button mat-button>Enroll</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular Material
+      </mat-panel-title>
+      <mat-panel-description>
+        Total durations: 2 hours
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p>
+      This is the panel content. Add courses details
+    </p>
+    <mat-action-row>
+      <button mat-button>Enroll</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</div>
+
+
+<div class="container">
+
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular Fundamentals
+        </mat-panel-title>
+        <mat-panel-description>
+          Total durations: 3 hours
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>
+        This is the panel content. Add courses details
+      </p>
+      <mat-action-row>
+        <button mat-button>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular Material
+        </mat-panel-title>
+        <mat-panel-description>
+          Total durations: 2 hours
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>
+        This is the panel content. Add courses details
+      </p>
+      <mat-action-row>
+        <button mat-button>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
