@@ -171,3 +171,37 @@
   </mat-sidenav-container>
 </div>
 
+<div class="container">
+  <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="frontEndSubMenu" >FrontEnd</button>
+    <button mat-menu-item [matMenuTriggerFor]="backEndSubMenu">Backend</button>
+  </mat-menu>
+
+  <mat-menu #frontEndSubMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+  </mat-menu>
+
+  <mat-menu #backEndSubMenu="matMenu">
+    <button mat-menu-item>Spring</button>
+    <button mat-menu-item>Django</button>
+    <button mat-menu-item>NodeJS</button>
+  </mat-menu>
+
+
+
+
+  <mat-menu #lazyMenu="matMenu">
+    <ng-template matMenuContent let-name="name">
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Help</button>
+      <button mat-menu-item>Logout {{name}}</button>
+    </ng-template>
+  </mat-menu>
+
+  <button mat-flat-button [matMenuTriggerData]="{name: 'Gmail'}" [matMenuTriggerFor]="lazyMenu">Gmail</button>
+  <button mat-flat-button [matMenuTriggerData]="{name: 'Instagram'}" [matMenuTriggerFor]="lazyMenu">Instagram</button>
+</div>
