@@ -143,11 +143,31 @@
 </div>
 
 <!-- toolbar -->
-<mat-toolbar color="primary" class="navbar">
-  <div>Ready4Java</div>
-  <div>
-    <span>home</span>
-    <span>about</span>
-    <span>services</span>
-  </div>
-</mat-toolbar>
+<div class="container">
+  <mat-toolbar color="primary" class="navbar">
+    <div>Ready4Java</div>
+    <div>
+      <span>home</span>
+      <span>about</span>
+      <span>services</span>
+    </div>
+  </mat-toolbar>
+</div>
+
+
+<!-- sidenav -->
+<div class="container">
+  <mat-sidenav-container class="main-app">
+    <mat-sidenav #sidenav mode="over" [(opened)]="opened">
+      Questa è la sidenav, che di default è nascosta.
+    </mat-sidenav>
+    <mat-sidenav-content>
+      main content
+      <button mat-button (click)="opened = !opened">Toggle opened</button>
+      <button mat-button (click)="sidenav.open()">Open</button>
+      <button mat-button (click)="sidenav.close()">Close</button>
+      <button mat-button (click)="sidenav.toggle()">Toggle</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+

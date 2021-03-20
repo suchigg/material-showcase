@@ -13,3 +13,19 @@ button {
     padding-right: 1rem;
   }
 }
+
+.main-app {
+
+  mat-sidenav, mat-sidenav-content {
+    padding: 4em;
+  }
+
+  mat-sidenav {
+    background-color: lightgray;
+    height: 200px;
+  }
+
+  mat-sidenav-container {
+    height: 100%;
+  }
+}
