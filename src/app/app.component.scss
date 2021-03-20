@@ -1,15 +1,15 @@
-button {
-  margin: 0 2em;
-}
+.main-app {
+  height: 100%;
 
-.container {
-  padding: 3em;
-}
+  mat-sidenav, mat-sidenav-content {
+    padding: 4em;
+  }
 
-.navbar {
-  justify-content: space-between;
+  mat-sidenav {
+    background-color: lightgray;
+  }
 
-  span {
-    padding-right: 1rem;
+  mat-sidenav-container {
+    height: 100%;
   }
 }
