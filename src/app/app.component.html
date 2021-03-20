@@ -1,241 +1,40 @@
+<!-- grid list-->
 <div class="container">
-  <!--	Large, one-off header, usually at the top of the page (e.g. a hero header). -->
-  <div class="mat-display-4">This is display 4</div>
-  <div class="mat-display-3">This is display 3</div>
-  <div class="mat-display-2">This is display 2</div>
-  <div class="mat-display-1">This is display 1</div>
-
-  <!-- Section heading corresponding from the <h1> to <h4> tags .-->
-  <div class="mat-h1 mat-headline">Section heading corresponding to the h1 tag.</div>
-  <div class="mat-h2 mat-title">Section heading corresponding to the h2 tag.</div>
-  <div class="mat-h3 mat-subheading-2">Section heading corresponding to the h3 tag.</div>
-  <div class="mat-h4 mat-subheading-1">Section heading corresponding to the h4 tag.</div>
-
-  <!-- Classes for body content -->
-  <div class="mat-body mat-body-1">Base body text</div>
-  <div class="mat-body-strong mat-body-2">Bolder body text</div>
-  <div class="mat-caption mat-small">Smaller body and hint text</div>
-</div>
-
-
-
-<div class="rectangular-buttons container">
-  <button mat-button>Basic</button>
-  <button mat-raised-button>Raised</button>
-  <button mat-stroked-button>Stroked</button>
-  <button mat-flat-button>Flat</button>
-</div>
-
-<div class="circular-buttons container">
-  <button mat-icon-button aria-label="Icon Button">
-    <mat-icon>home</mat-icon>
-  </button>
-
-  <button mat-fab aria-label="FAB Button" disableRipple>
-    <mat-icon>delete</mat-icon>
-  </button>
-
-  <button mat-mini-fab aria-label="MinI FAB Button">
-    <mat-icon>menu</mat-icon>
-  </button>
-</div>
-
-<div class="colored-buttons container">
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button colro="warn">Warn</button>
+  <mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile>Tile 1</mat-grid-tile>
+    <mat-grid-tile>Tile 2</mat-grid-tile>
+    <mat-grid-tile>Tile 3</mat-grid-tile>
+    <mat-grid-tile>Tile 4</mat-grid-tile>
+    <mat-grid-tile rowspan="2">Tile 5</mat-grid-tile>
+    <mat-grid-tile>Tile 6</mat-grid-tile>
+    <mat-grid-tile>Tile 7</mat-grid-tile>
+    <mat-grid-tile colspan=2>Tile 8</mat-grid-tile>
+  </mat-grid-list>
 </div>
 
 <div class="container">
-  <mat-button-toggle>Toggle Me</mat-button-toggle>
-</div>
-
-
-<!-- radio toggle group-->
-<div class="container">
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #fontSyleGroup="matButtonToggleGroup">
-    <mat-button-toggle value="bold">Bold</mat-button-toggle>
-    <mat-button-toggle value="italic">Italic</mat-button-toggle>
-    <mat-button-toggle value="underline">Underline</mat-button-toggle>
-  </mat-button-toggle-group>
-  <p>selected: {{fontSyleGroup.value}}</p>
-</div>
-
-
-<!-- checkbox toggle group -->
-<div class="container">
-  <mat-button-toggle-group name="tech" aria-label="Font Style" #techGroup="matButtonToggleGroup" multiple>
-    <mat-button-toggle value="angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="react">React</mat-button-toggle>
-    <mat-button-toggle value="vue">Vue</mat-button-toggle>
-  </mat-button-toggle-group>
-  <p>selected: {{techGroup.value}}</p>
-</div>
-
-
-
-<!-- icons -->
-<div class="container">
-  <mat-icon>card_giftcard</mat-icon>
-  <mat-icon color="primary">filter_alt</mat-icon>
-  <mat-icon color="accent">eco</mat-icon>
-  <mat-icon color="warn">language</mat-icon>
-</div>
-
-<!-- badges positions-->
-<div class="container">
-  <span matBadge="5">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="8" matBadgePosition="below before">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="13" matBadgePosition="below after">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="21" matBadgePosition="above before">Notifications</span>
-</div>
-
-<!-- badges sizes -->
-<div class="container">
-  <span matBadge="1" matBadgeSize="small">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="2" matBadgeSize="medium">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="3" matBadgeSize="large">Notifications</span>
-</div>
-
-<!-- badges colors -->
-<div class="container">
-  <span matBadge="1" matBadgeColor="primary">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="2" matBadgeColor="accent">Notifications</span>
-</div>
-<div class="container">
-  <span matBadge="3" matBadgeColor="warn">Notifications</span>
-</div>
-
-<!-- spinners e progress bar-->
-<div class="container">
-  <mat-progress-spinner value="21"></mat-progress-spinner>
-  <mat-progress-spinner value="55" color="accent"></mat-progress-spinner>
-  <mat-progress-spinner value="100" color="warn"></mat-progress-spinner>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile rowspan="2">Tile 5</mat-grid-tile>
+    <mat-grid-tile>Tile 6</mat-grid-tile>
+    <mat-grid-tile>Tile 7</mat-grid-tile>
+    <mat-grid-tile colspan=2>Tile 8</mat-grid-tile>
+  </mat-grid-list>
 </div>
 
 <div class="container">
-  <mat-spinner></mat-spinner>
+  <mat-grid-list cols="2" rowHeight="fit" style="height: 150px;">
+    <mat-grid-tile rowspan="2">Tile 5</mat-grid-tile>
+    <mat-grid-tile>Tile 6</mat-grid-tile>
+    <mat-grid-tile>Tile 7</mat-grid-tile>
+    <mat-grid-tile colspan=2>Tile 8</mat-grid-tile>
+  </mat-grid-list>
 </div>
 
 <div class="container">
-  <mat-progress-bar mode="determinate" value="66"></mat-progress-bar>
-</div>
-<div class="container">
-  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-</div>
-<div class="container">
-  <mat-progress-bar mode="buffer" color="accent" value="35" bufferValue="55"></mat-progress-bar>
-</div>
-<div class="container">
-  <mat-progress-bar mode="query"></mat-progress-bar>
-</div>
-
-<!-- toolbar -->
-<div class="container">
-  <mat-toolbar color="primary" class="navbar">
-    <div>Ready4Java</div>
-    <div>
-      <span>home</span>
-      <span>about</span>
-      <span>services</span>
-    </div>
-  </mat-toolbar>
-</div>
-
-
-<!-- sidenav -->
-<div class="container">
-  <mat-sidenav-container class="main-app">
-    <mat-sidenav #sidenav mode="over" [(opened)]="opened">
-      Questa è la sidenav, che di default è nascosta.
-    </mat-sidenav>
-    <mat-sidenav-content>
-      main content
-      <button mat-button (click)="opened = !opened">Toggle opened</button>
-      <button mat-button (click)="sidenav.open()">Open</button>
-      <button mat-button (click)="sidenav.close()">Close</button>
-      <button mat-button (click)="sidenav.toggle()">Toggle</button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
-
-<!-- menu -->
-<div class="container">
-  <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
-
-  <mat-menu #appMenu="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="frontEndSubMenu" >FrontEnd</button>
-    <button mat-menu-item [matMenuTriggerFor]="backEndSubMenu">Backend</button>
-  </mat-menu>
-
-  <mat-menu #frontEndSubMenu="matMenu">
-    <button mat-menu-item>Angular</button>
-    <button mat-menu-item>React</button>
-    <button mat-menu-item>Vue</button>
-  </mat-menu>
-
-  <mat-menu #backEndSubMenu="matMenu">
-    <button mat-menu-item>Spring</button>
-    <button mat-menu-item>Django</button>
-    <button mat-menu-item>NodeJS</button>
-  </mat-menu>
-
-  <mat-menu #lazyMenu="matMenu">
-    <ng-template matMenuContent let-name="name">
-      <button mat-menu-item>Settings</button>
-      <button mat-menu-item>Help</button>
-      <button mat-menu-item>Logout {{name}}</button>
-    </ng-template>
-  </mat-menu>
-
-  <button mat-flat-button [matMenuTriggerData]="{name: 'Gmail'}" [matMenuTriggerFor]="lazyMenu">Gmail</button>
-  <button mat-flat-button [matMenuTriggerData]="{name: 'Instagram'}" [matMenuTriggerFor]="lazyMenu">Instagram</button>
-</div>
-
-
-<!-- liste -->
-<div class="container">
-  <mat-list>
-    <mat-list-item>item 1</mat-list-item>
-    <mat-list-item>Item 2</mat-list-item>
-    <mat-list-item>Item 3</mat-list-item>
-  </mat-list>
-
-  <mat-list dense>
-    <mat-list-item>Dense item 1</mat-list-item>
-    <mat-list-item>Dense Item 2</mat-list-item>
-    <mat-list-item>Dense Item 3</mat-list-item>
-  </mat-list>
-
-  <mat-nav-list>
-    <a mat-list-item href="#">Home</a>
-    <a mat-list-item href="#">Abount</a>
-    <a mat-list-item href="#">Profile</a>
-  </mat-nav-list>
-
-  <mat-list>
-    <mat-list-item>
-      <mat-icon matListIcon>home</mat-icon>
-      <h3 matLine>Heading</h3>
-      <p matLine>Line</p>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>
-      <mat-icon matListIcon>folder</mat-icon>
-      <h3 matLine>Heading 2</h3>
-      <p matLine>Line 2</p>
-    </mat-list-item>
-  </mat-list>
+  <mat-grid-list cols="2" rowHeight="fit" style="height: 150px;" gutterSize="10">
+    <mat-grid-tile rowspan="2">Tile 5</mat-grid-tile>
+    <mat-grid-tile>Tile 6</mat-grid-tile>
+    <mat-grid-tile>Tile 7</mat-grid-tile>
+    <mat-grid-tile colspan=2>Tile 8</mat-grid-tile>
+  </mat-grid-list>
 </div>
