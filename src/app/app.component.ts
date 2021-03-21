@@ -1,18 +1,20 @@
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'components-showcase';
 
   opened = false;
@@ -88,11 +90,17 @@ export class AppComponent implements OnInit {
   dataSource = ELEMENT_DATA;
 
   filteredDataSource = new MatTableDataSource(ELEMENT_DATA);
+  sortedDataSource = new MatTableDataSource(ELEMENT_DATA);
 
   public applyFilter(value: string = ''): void {
     this.filteredDataSource.filter = value.trim().toLowerCase();
   }
 
+  @ViewChild(MatSort) sort: MatSort;
+  ngAfterViewInit(): void {
+    /** table */
+    this.sortedDataSource.sort = this.sort;
+  }
 }
 
 export interface PeriodicElement {
