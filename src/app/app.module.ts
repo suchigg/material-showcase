@@ -3,18 +3,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent, CustomSnackbarComponent } from './app.component';
+import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomSnackbarComponent
+    DialogExampleComponent
   ],
   entryComponents: [
-    CustomSnackbarComponent
+    DialogExampleComponent
   ],
   imports: [
     BrowserModule,
