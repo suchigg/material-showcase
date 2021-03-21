@@ -442,3 +442,51 @@
     <a mat-tab-link disabled>Disabled Link</a>
   </nav>
 </div>
+
+<div class="container">
+  <mat-horizontal-stepper>
+    <mat-step label="Shipping address">
+      <p>Shipping address details</p>
+      <div>
+        <button mat-flat-button matStepperNext>next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Billing address">
+      <p>Billing address details</p>
+      <div>
+        <button mat-flat-button matStepperPrevious>previous</button>
+        <button mat-flat-button matStepperNext>next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Place order">
+      <p>Place order details</p>
+      <div>
+        <button mat-flat-button matStepperPrevious>previous</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+
+<div class="container">
+  <mat-horizontal-stepper linear>
+    <mat-step label="Shipping address" completed="true">
+      <p>Shipping address details</p>
+      <div>
+        <button mat-flat-button matStepperNext>next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Billing address" completed="false">
+      <p>Billing address details</p>
+      <div>
+        <button mat-flat-button matStepperPrevious>previous</button>
+        <button mat-flat-button matStepperNext>next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Place order" completed="false">
+      <p>Place order details</p>
+      <div>
+        <button mat-flat-button matStepperPrevious>previous</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
