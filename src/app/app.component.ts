@@ -1,5 +1,7 @@
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -57,7 +59,8 @@ export class AppComponent implements OnInit {
     return day !== 0 && day !== 6;
   }
 
-  constructor(private readonly snackBar: MatSnackBar) {}
+  constructor(private readonly snackBar: MatSnackBar,
+              private readonly dialog: MatDialog) {}
 
   public openSnackbar(msg: string, action?: string): void {
     const conf: MatSnackBarConfig = {duration: 2000};
@@ -71,6 +74,13 @@ export class AppComponent implements OnInit {
     this.snackBar.openFromComponent(CustomSnackbarComponent, {duration: 2000})
   }
 
+  public openDialog(): void {
+    const dialogRef = this.dialog.open(DialogExampleComponent, {data: {name: 'Luca'}});
+
+    dialogRef.afterClosed().subscribe(res => {
+      console.log(`Dialog result: ${res}`);
+    });
+  }
 
 }
 
