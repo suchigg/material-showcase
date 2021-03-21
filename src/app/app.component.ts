@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'components-showcase';
 
   opened = false;
+
 }
