@@ -1,43 +1,5 @@
-button {
-  margin: 0 2em;
-}
-
 .container {
-  padding: 3em;
-}
-
-.navbar {
-  justify-content: space-between;
-
-  span {
-    padding-right: 1rem;
-  }
-}
-
-.main-app {
-
-  mat-sidenav, mat-sidenav-content {
-    padding: 4em;
-  }
-
-  mat-sidenav {
-    background-color: lightgray;
-    height: 200px;
-  }
-
-  mat-sidenav-container {
-    height: 100%;
-  }
-}
-
-mat-grid-tile {
-  background-color: lightblue;
-}
-
-
-.example-card {
-  margin: 2em;
-  width: 300px;
+  padding: 2em;
 }
 
 table {
