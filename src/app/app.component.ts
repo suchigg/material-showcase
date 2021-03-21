@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-root',
@@ -85,6 +86,12 @@ export class AppComponent implements OnInit {
   /** table */
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+
+  filteredDataSource = new MatTableDataSource(ELEMENT_DATA);
+
+  public applyFilter(value: string = ''): void {
+    this.filteredDataSource.filter = value.trim().toLowerCase();
+  }
 
 }
 
