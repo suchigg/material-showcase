@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
@@ -56,7 +57,32 @@ export class AppComponent implements OnInit {
     return day !== 0 && day !== 6;
   }
 
+  constructor(private readonly snackBar: MatSnackBar) {}
+
+  public openSnackbar(msg: string, action?: string): void {
+    const conf: MatSnackBarConfig = {duration: 2000};
+    const snackbarRef = this.snackBar.open(msg, action, conf);
+
+    snackbarRef.afterDismissed().subscribe( () => console.log('snackbar dismissed'));
+    snackbarRef.onAction().subscribe( () => console.log('the snackbar action was triggerd'));
+  }
+
+  public openCustomSnackbar(msg: string): void {
+    this.snackBar.openFromComponent(CustomSnackbarComponent, {duration: 2000})
+  }
+
 
 }
+
+@Component({
+  selector: 'custom-snackbar',
+  template: `<span>My custom snackbar</span>`,
+  styles: [
+    `span {
+      color: orange;
+    }`
+  ]
+})
+export class CustomSnackbarComponent {}
 
 

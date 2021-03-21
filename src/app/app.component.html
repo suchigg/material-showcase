@@ -667,3 +667,14 @@
 <div class="container">
   <button mat-raised-button matTooltip="Welcome to Ready4Java" matTooltipHideDelay="500">My Button</button><br>
 </div>
+
+<!-- Snackbar -->
+<div class="container">
+  <button mat-raised-button (click)="openSnackbar('This is my notification')">Open Snackbar</button>
+</div>
+<div class="container">
+  <button mat-raised-button (click)="openSnackbar('Item deleted', 'undo')">Delete</button>
+</div>
+<div class="container">
+  <button mat-raised-button (click)="openCustomSnackbar('Show custom snackbar')">Snackbar with Custom Component</button>
+</div>
