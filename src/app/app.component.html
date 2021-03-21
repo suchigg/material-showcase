@@ -436,13 +436,13 @@
 
 <div class="container">
   <nav mat-tab-nav-bar>
-    <a mat-tab-link *ngFor="let link of ['Home', 'About', 'Contat Us']"
-       (click)="activeLink = link"
-       [active]="activeLink == link"> {{link}} </a>
+    <a mat-tab-link *ngFor="let link of ['Home', 'About', 'Contat Us']" (click)="activeLink = link"
+      [active]="activeLink == link"> {{link}} </a>
     <a mat-tab-link disabled>Disabled Link</a>
   </nav>
 </div>
 
+<!-- stepper -->
 <div class="container">
   <mat-horizontal-stepper>
     <mat-step label="Shipping address">
@@ -491,7 +491,7 @@
   </mat-horizontal-stepper>
 </div>
 
-
+<!-- form field and input -->
 <div class="container">
   <mat-form-field appearance="legacy">
     <mat-label>Legacy Label</mat-label>
@@ -537,4 +537,36 @@
     <input matInput placeholder="pat@example.com" [formControl]="email" required>
     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
+</div>
+
+<!-- Select -->
+<div class="container">
+  <mat-form-field appearance="outline">
+    <mat-label>Framework</mat-label>
+    <mat-select placeholder="Framework" name="item" [(value)]="selectedValue">
+      <mat-option>None</mat-option>
+      <mat-option value="angular">Angular</mat-option>
+      <mat-option value="react">React</mat-option>
+      <mat-option value="vue">Vue</mat-option>
+    </mat-select>
+  </mat-form-field>
+  {{selectedValue}}
+</div>
+
+<div class="container">
+  <mat-form-field appearance="outline">
+    <mat-label>FE Technologies</mat-label>
+    <mat-select placeholder="FE Technologies" name="item" multiple [(value)]="selectedFEValue">
+      <mat-optgroup label="Web">
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="react">React</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+      </mat-optgroup>
+      <mat-optgroup label="Mobile">
+        <mat-option value="ionic">Ionic</mat-option>
+        <mat-option value="reactnative">React Native</mat-option>
+      </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+  {{selectedFEValue}}
 </div>

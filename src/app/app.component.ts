@@ -21,5 +21,7 @@ export class AppComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
+  selectedValue: string;
+  selectedFEValue: string;
 
 }
