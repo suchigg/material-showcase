@@ -490,3 +490,51 @@
     </mat-step>
   </mat-horizontal-stepper>
 </div>
+
+
+<div class="container">
+  <mat-form-field appearance="legacy">
+    <mat-label>Legacy Label</mat-label>
+    <input matInput placeholder="legacy">
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Standard Label</mat-label>
+    <input matInput placeholder="standard">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Fill Label</mat-label>
+    <input matInput placeholder="fill">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Outline Label</mat-label>
+    <input matInput placeholder="outline">
+  </mat-form-field>
+</div>
+
+
+<div class="container">
+  <mat-form-field appearance="outline">
+    <mat-label>First name</mat-label>
+    <input matInput placeholder="first name" required>
+    <mat-hint>Min 2 characters</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="last name" required>
+    <mat-hint>Min 2 characters</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>Biography</mat-label>
+    <textarea matInput placeholder="This is my story"></textarea>
+    <mat-hint align="end">Tell me something about you</mat-hint>
+  </mat-form-field>
+</div>
+
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</div>
