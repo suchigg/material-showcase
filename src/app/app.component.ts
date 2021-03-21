@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 @Component({
@@ -91,15 +92,20 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   filteredDataSource = new MatTableDataSource(ELEMENT_DATA);
   sortedDataSource = new MatTableDataSource(ELEMENT_DATA);
+  paginatedDataSource = new MatTableDataSource(ELEMENT_DATA);
 
   public applyFilter(value: string = ''): void {
     this.filteredDataSource.filter = value.trim().toLowerCase();
   }
 
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   ngAfterViewInit(): void {
     /** table */
     this.sortedDataSource.sort = this.sort;
+
+    this.paginatedDataSource.paginator = this.paginator;
   }
 }
 
