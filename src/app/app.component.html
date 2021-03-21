@@ -623,3 +623,32 @@
     <mat-radio-button value="vue" color="warn">Vue</mat-radio-button>
   </mat-radio-group>
 </div>
+
+<!-- datepicker -->
+<div class="container">
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="standard view">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> <br>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="yearPicker" placeholder="year view">
+    <mat-datepicker-toggle matSuffix [for]="yearPicker"></mat-datepicker-toggle>
+    <mat-datepicker #yearPicker startView="year"></mat-datepicker>
+  </mat-form-field> <br>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="limitedPicker" placeholder="Limited intervall" [min]="minDate" [max]="maxDate">
+    <mat-datepicker-toggle matSuffix [for]="limitedPicker"></mat-datepicker-toggle>
+    <mat-datepicker #limitedPicker></mat-datepicker>
+  </mat-form-field> <br>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="filteredPicker" placeholder="Filtered dates" [matDatepickerFilter]="excludeSaturdayAndSunday">
+    <mat-datepicker-toggle matSuffix [for]="filteredPicker"></mat-datepicker-toggle>
+    <mat-datepicker #filteredPicker></mat-datepicker>
+  </mat-form-field> <br>
+
+
+</div>

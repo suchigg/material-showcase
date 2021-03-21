@@ -47,6 +47,15 @@ export class AppComponent implements OnInit {
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
+  minDate = new Date();
+  maxDate = new Date(2021, 2, 30);
+
+  excludeSaturdayAndSunday = (d: Date | null): boolean => {
+    const day = (d || new Date()).getDay();
+    // Prevent Saturday and Sunday from being selected.
+    return day !== 0 && day !== 6;
+  }
+
 
 }
 
